@@ -106,3 +106,13 @@ function reset() {
     userSequence=[];
     level=0;
 }
+// Theme toggle logic
+const themeSwitch = document.getElementById("themeSwitch");
+
+themeSwitch.addEventListener("change", function () {
+    if (this.checked) {
+        document.body.classList.add("dark");
+    } else {
+        document.body.classList.remove("dark");
+    }
+});
