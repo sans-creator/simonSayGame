@@ -4,6 +4,11 @@ body {
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease;
     background-color: white;
+    background-image: url("https://img.freepik.com/premium-photo/simon-says-game-isolated-white-background_971989-26929.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Game title */
