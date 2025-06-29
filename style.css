@@ -116,3 +116,12 @@ body.dark .btn {
 body.dark h2 {
     color: #ddd;
 }
+h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+body.dark h3 {
+    color: #ccc;
+}
