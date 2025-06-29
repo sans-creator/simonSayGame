@@ -1,3 +1,7 @@
+let maxScore = localStorage.getItem("highScore") || 0;
+let highScoreDisplay = document.getElementById("highScore");
+highScoreDisplay.innerText = `High Score: ${maxScore}`;
+
 let gameSequence = [];
 let userSequence = [];
 
@@ -68,6 +72,12 @@ function checkAns(idx) {
         }
     }
     else{
+        if (level > maxScore) {
+        maxScore = level;
+        localStorage.setItem("highScore", maxScore);
+        highScoreDisplay.innerText = `High Score: ${maxScore}`;
+        }
+
         h2.innerHTML=`Game Over! Your Score is <b> ${level}</b> <br>Press Any key to start`;
         document.querySelector('body').style.backgroundColor='red';
         setTimeout(function(){
