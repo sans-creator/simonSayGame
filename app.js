@@ -40,7 +40,7 @@ function levelUp(){
 
 
     //random btn choose
-    let randomIdx=Math.floor(Math.random()*3);
+    let randomIdx=Math.floor(Math.random()*btns.length);
     let randColor=btns[randomIdx];
 
     let randomBtn=document.querySelector(`.${randColor}`);
@@ -68,9 +68,17 @@ function checkAns(idx) {
         }
     }
     else{
-        h2.innerText=`Game Over! Press Any key to start`;
-        reset()
+        h2.innerHTML=`Game Over! Your Score is <b> ${level}</b> <br>Press Any key to start`;
+        document.querySelector('body').style.backgroundColor='red';
+        setTimeout(function(){
+            document.querySelector('body').style.backgroundColor='white'},150);
+
+        reset();    
+
+        
+        
        }
+     
 }
 
 function btnPress() {
